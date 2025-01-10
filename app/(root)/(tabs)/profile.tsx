@@ -3,19 +3,18 @@ import React from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 /**
- * Home Screen
+ * Profile Screen
  *
- * A screen that displays the Index screen : home.
+ * A screen that displays the Profile screen.
  *
- * @returns The Home Screen.
+ * @returns The Profile Screen.
  */
-
-const Home = () => {
+const Profile = () => {
   return (
     <SafeAreaView>
-      <Text>Home</Text>
+      <Text>Profile</Text>
     </SafeAreaView>
   );
 };
 
-export default Home;
+export default Profile;

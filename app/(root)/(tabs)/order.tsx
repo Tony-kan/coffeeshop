@@ -3,19 +3,18 @@ import React from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 /**
- * Home Screen
+ * Order Screen
  *
- * A screen that displays the Index screen : home.
+ * A screen that displays all orders.
  *
- * @returns The Home Screen.
+ * @returns The Order Screen.
  */
-
-const Home = () => {
+const Order = () => {
   return (
     <SafeAreaView>
-      <Text>Home</Text>
+      <Text>Order</Text>
     </SafeAreaView>
   );
 };
 
-export default Home;
+export default Order;

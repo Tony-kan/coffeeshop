@@ -1,19 +1,16 @@
-import { icons, images } from "@/constants";
-import { Text, View, Image } from "react-native";
+import { Redirect } from "expo-router";
 
 export default function Index() {
-  return (
-    <View
-      style={{
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      <Text className="font-sora text-red-400">
-        Edit app/index.tsx to edit this screen.
-      </Text>
-     
-    </View>
-  );
+  // const {onboarded,signedIn} = useAuth();
+  const { onboarded, signedIn } = { onboarded: false, signedIn: false };
+
+  if (onboarded && signedIn) {
+    return <Redirect href="/(root)/(tabs)" />;
+  }
+
+  if (onboarded && !signedIn) {
+    return <Redirect href="/(auth)/sign-in" />;
+  }
+
+  return <Redirect href="/(auth)/onboarding" />;
 }

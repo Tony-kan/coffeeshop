@@ -3,19 +3,18 @@ import React from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 /**
- * Home Screen
+ * Favorite Screen
  *
- * A screen that displays the Index screen : home.
+ * A screen that displays all favorited items.
  *
- * @returns The Home Screen.
+ * @returns The Favorite Screen.
  */
-
-const Home = () => {
+const Favorite = () => {
   return (
     <SafeAreaView>
-      <Text>Home</Text>
+      <Text>Favorite</Text>
     </SafeAreaView>
   );
 };
 
-export default Home;
+export default Favorite;
