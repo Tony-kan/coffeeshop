@@ -10,7 +10,7 @@
     <img src="https://img.shields.io/badge/-Google_Maps-black?style=for-the-badge&logoColor=white&logo=googlemaps&color=4285F4" alt="googlemaps" />
   </div>
 
-<h3 align="center">CoffeeShop Mobile App</h3>
+<h3 align="center">CoffeeShop App</h3>
 
 </div>
 
@@ -67,7 +67,7 @@ Make sure you have the following installed on your machine:
 **Cloning the Repository**
 
 ```bash
-git clone https://github.com/yourusername/coffeeshop.git
+git clone https://github.com/Tony-kan/coffeeshop.git
 cd coffeeshop
 ```
 
