@@ -23,18 +23,18 @@ module.exports = {
           // 200 : selecting
           200: "",
           // 300 : active state
-          300: "",
+          300: "#C67C4E",
         },
         // secondary : backgrounds,borders,alternating buttons styles
         secondary: {
           // card background
-          100: "#9B9B9B",
+          100: "",
 
           // 200 : links
           200: "",
 
           //300 : icons,labels
-          300: "",
+          300: "#9B9B9B",
         },
         // accent : decorative icons
         accent: {},

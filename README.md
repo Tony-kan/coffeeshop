@@ -8,6 +8,7 @@
     <img src="https://img.shields.io/badge/-Supabase-black?style=for-the-badge&logoColor=white&logo=supabase&color=3ECF8E" alt="supabase" />
     <img src="https://img.shields.io/badge/-Tailwind_CSS-black?style=for-the-badge&logoColor=white&logo=tailwindcss&color=06B6D4" alt="tailwindcss" />
     <img src="https://img.shields.io/badge/-Google_Maps-black?style=for-the-badge&logoColor=white&logo=googlemaps&color=4285F4" alt="googlemaps" />
+     <img src="https://img.shields.io/badge/-Zustand-black?style=for-the-badge&logoColor=white&logo=zustand&color=764ABC" alt="zustand" />
   </div>
 
 <h3 align="center">CoffeeShop App</h3>
@@ -33,6 +34,7 @@ scalable experience.
 - React Native
 - TypeScript
 - Supabase
+- Zustand
 - Tailwind CSS
 - Google Maps
 
@@ -41,6 +43,8 @@ scalable experience.
 👉 **Onboarding**: A smooth onboarding experience for new users.
 
 👉 **Authentication with Google**: Secure and seamless user sign-ins using Google’s authentication service.
+
+👉 **Username-Password Authentication**: Traditional authentication method using username and password.
 
 👉 **Home Screen**: Displays the latest and recommended coffee products with powerful search and filter functionality.
 
