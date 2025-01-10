@@ -6,7 +6,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        "sora": ["Sora-Regular", "sans-serif"],
+        sora: ["Sora-Regular", "sans-serif"],
         "sora-thin": ["Sora-Thin", "sans-serif"],
         "sora-light": ["Sora-Light", "sans-serif"],
         "sora-extraLight": ["Sora-ExtraLight", "sans-serif"],
@@ -16,13 +16,33 @@ module.exports = {
         "sora-extraBold": ["Sora-ExtraBold", "sans-serif"],
       },
       colors: {
+        // primary mostly for primary actions e.g buttons
         primary: {
-          100: "",
+          // 100 : hover state
+          100: "#C67C4E",
+          // 200 : selecting
           200: "",
+          // 300 : active state
+          300: "",
         },
-        secondary: {},
+        // secondary : backgrounds,borders,alternating buttons styles
+        secondary: {
+          // card background
+          100: "#9B9B9B",
+
+          // 200 : links
+          200: "",
+
+          //300 : icons,labels
+          300: "",
+        },
+        // accent : decorative icons
         accent: {},
-        danger: {},
+        danger: {
+          100: "#FFCDD2", // light red  : soft warning - backgrounds/alerts
+          200: "#E57373", // medium red : medium warning - emphasized text in alerts
+          300: "#D32F2F", // dark red : strong warning - delete buttons
+        },
         success: {},
       },
     },

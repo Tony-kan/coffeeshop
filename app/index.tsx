@@ -1,4 +1,5 @@
-import { Text, View } from "react-native";
+import { icons, images } from "@/constants";
+import { Text, View, Image } from "react-native";
 
 export default function Index() {
   return (
@@ -12,6 +13,7 @@ export default function Index() {
       <Text className="font-sora text-red-400">
         Edit app/index.tsx to edit this screen.
       </Text>
+     
     </View>
   );
 }
