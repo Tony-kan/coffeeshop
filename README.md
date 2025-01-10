@@ -44,6 +44,8 @@ scalable experience.
 
 👉 **Authentication with Google**: Secure and seamless user sign-ins using Google’s authentication service.
 
+👉 **Apple Authentication**: Secure and seamless user sign-ins using Apple’s authentication service.
+
 👉 **Username-Password Authentication**: Traditional authentication method using username and password.
 
 👉 **Home Screen**: Displays the latest and recommended coffee products with powerful search and filter functionality.

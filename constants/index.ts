@@ -15,6 +15,12 @@ import star from "../assets/icons/star.png";
 import phone from "../assets/icons/telpon.png";
 import dots from "../assets/icons/dots.png";
 import filter from "../assets/icons/furnitur-icon.png";
+import apple from "../assets/icons/Apple Logo.png";
+import google from "../assets/icons/Google.png";
+import eyeOpen from "../assets/icons/eyeopen.png";
+import eyeCross from "../assets/icons/eyecross.png";
+import email from "../assets/icons/email.png";
+import lock from "../assets/icons/lock.png";
 
 //images
 import onboarding from "../assets/images/onboarding.png";
@@ -44,4 +50,10 @@ export const icons = {
   phone,
   dots,
   filter,
+  apple,
+  google,
+  eyeOpen,
+  eyeCross,
+  email,
+  lock,
 };
