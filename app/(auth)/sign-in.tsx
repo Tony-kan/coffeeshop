@@ -29,12 +29,14 @@ const SignIn = () => {
   const onSignIn = () => {};
   return (
     <SafeAreaView className="h-full">
-      <ScrollView contentContainerClassName="h-full">
-        <View className="mt-6">
+      <ScrollView contentContainerClassName="h-full flex justify-center">
+        <View className="mt-2">
           {/* Top section,title,subtile : welcoming text,Apple and Google buttons */}
-          <View className="flex justify-center items-start gap-4 mx-4 mt-4">
-            <Text className="font-sora-semiBold text-2xl">Welcome Again ,</Text>
-            <Text className="font-sora-bold text-xl">Sign In </Text>
+          <View className="flex justify-center items-start gap-7 mx-4 mt-w">
+            <Text className="font-sora-extraBold text-3xl">
+              Welcome Again ,
+            </Text>
+            <Text className="font-sora-bold text-2xl">Sign In </Text>
             <View className="flex flex-row mt-4 justify-center items-center gap-2">
               <TouchableOpacity
                 onPress={onPressAppleButton}
@@ -87,9 +89,12 @@ const SignIn = () => {
 
           {/* dont have account */}
           <View className="flex">
-            <Link href="/sign-up" className="text-lg text-center mt-10">
+            <Link
+              href="/sign-up"
+              className="text-xl font-sora text-center mt-10 "
+            >
               <Text>Don't have an Account ? </Text>
-              <Text className="text-primary-300">Sign Up</Text>
+              <Text className="text-primary-300"> Sign Up</Text>
             </Link>
           </View>
         </View>

@@ -46,7 +46,7 @@ scalable experience.
 
 👉 **Apple Authentication**: Secure and seamless user sign-ins using Apple’s authentication service.
 
-👉 **Username-Password Authentication**: Traditional authentication method using username and password.
+👉 **Email-Password Authentication**: Traditional authentication method using email and password.
 
 👉 **Home Screen**: Displays the latest and recommended coffee products with powerful search and filter functionality.
 

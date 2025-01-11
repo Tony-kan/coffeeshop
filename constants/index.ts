@@ -21,6 +21,7 @@ import eyeOpen from "../assets/icons/eyeopen.png";
 import eyeCross from "../assets/icons/eyecross.png";
 import email from "../assets/icons/email.png";
 import lock from "../assets/icons/lock.png";
+import user from "../assets/icons/person.png";
 
 //images
 import onboarding from "../assets/images/onboarding.png";
@@ -56,4 +57,5 @@ export const icons = {
   eyeCross,
   email,
   lock,
+  user,
 };
