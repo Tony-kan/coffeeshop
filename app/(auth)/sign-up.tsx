@@ -5,6 +5,7 @@ import { icons } from "@/constants";
 import InputField from "@/components/InputField";
 import CustomButton from "@/components/CustomButton";
 import { Link } from "expo-router";
+import { signUp } from "@/lib/supabase";
 
 const SignUp = () => {
   const [form, setForm] = useState({
@@ -19,7 +20,10 @@ const SignUp = () => {
     console.log("clicked google auth");
   };
 
-  const onSignUp = () => {};
+  const onSignUp = async () => {
+    console.log(form);
+    await signUp(form.email, form.password);
+  };
   return (
     <SafeAreaView className="h-full">
       <ScrollView contentContainerClassName="h-full flex justify-center">

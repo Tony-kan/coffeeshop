@@ -4,7 +4,10 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { icons } from "@/constants";
 import InputField from "@/components/InputField";
 import CustomButton from "@/components/CustomButton";
-import { Link } from "expo-router";
+import { Link, Redirect } from "expo-router";
+import { useGlobalContext } from "@/context/global-provider";
+import { useSupabase } from "@/lib/useSupabase";
+import { signIn } from "@/lib/supabase";
 
 /**
  * SignIn Screen
@@ -19,6 +22,10 @@ const SignIn = () => {
     email: "",
     password: "",
   });
+
+  // const { refetch, loading, isLoggedIn } = useGlobalContext();
+
+  // if (!loading && isLoggedIn) return <Redirect href="/" />;
   const onPressAppleButton = () => {
     console.log("clicked apple auth");
   };
@@ -26,7 +33,13 @@ const SignIn = () => {
     console.log("clicked google auth");
   };
 
-  const onSignIn = () => {};
+  const onSignIn = async () => {
+    await signIn(form.email, form.password);
+    // const { data: user, refetch } = useSupabase({
+    //   fn: signIn,
+    //   params: { ...form },
+    // });
+  };
   return (
     <SafeAreaView className="h-full">
       <ScrollView contentContainerClassName="h-full flex justify-center">

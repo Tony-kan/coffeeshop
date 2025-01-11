@@ -1,3 +1,4 @@
+import { UseSupabaseOptions, UseSupabaseReturn } from "@/types/type";
 import { useState, useEffect, useCallback } from "react";
 import { Alert } from "react-native";
 

@@ -35,3 +35,15 @@ declare interface ButtonProps extends TouchableOpacityProps {
   IconRight?: React.ComponentType<any>;
   className?: string;
 }
+
+declare interface GlobalContextType {
+  isLoggedIn: boolean;
+  user: User | null;
+  loading: boolean;
+  refetch: (newParams?: Record<string, string | number>) => Promise<void>;
+  // refetch: () => void;
+}
+
+declare interface GlobalProviderProps {
+  children: ReactNode;
+}

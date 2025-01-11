@@ -28,7 +28,7 @@ AppState.addEventListener("change", (state) => {
   }
 });
 
-async function signIn(email: string, password: string) {
+export async function signIn(email: string, password: string) {
   const { error } = await supabase.auth.signInWithPassword({
     email,
     password,
@@ -38,7 +38,7 @@ async function signIn(email: string, password: string) {
   return;
 }
 
-async function signUp(email: string, password: string) {
+export async function signUp(email: string, password: string) {
   const {
     data: { session },
     error,
@@ -50,4 +50,15 @@ async function signUp(email: string, password: string) {
   if (!session) Alert.alert("Please check your inbox for email verification!");
   //   return { user, session };
   return { session };
+}
+
+export async function signOut() {
+  const { error } = await supabase.auth.signOut();
+  if (error) Alert.alert("Error signing out", error.message);
+  return;
+}
+
+export async function getCurrentUser() {
+  const user = supabase.auth.getUser();
+  return user;
 }

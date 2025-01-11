@@ -55,6 +55,7 @@ const InputField = ({
               placeholder={placeholder}
               onFocus={() => setIsFocused(true)}
               onBlur={() => setIsFocused(false)}
+              {...props}
             />
             {secureTextEntry && (
               <TouchableWithoutFeedback onPress={handleEyeIconPress}>
