@@ -36,7 +36,7 @@ const SignIn = () => {
             <Text className="font-sora-extraBold text-3xl">
               Welcome Again ,
             </Text>
-            <Text className="font-sora-bold text-2xl">Sign In </Text>
+            <Text className="font-sora-bold text-2xl"> Login </Text>
             <View className="flex flex-row mt-4 justify-center items-center gap-2">
               <TouchableOpacity
                 onPress={onPressAppleButton}
@@ -84,7 +84,7 @@ const SignIn = () => {
               secureTextEntry={true}
               onChangeText={(value) => setForm({ ...form, password: value })}
             />
-            <CustomButton title="Sign In" onPress={onSignIn} className="mt-6" />
+            <CustomButton title="Login" onPress={onSignIn} className="mt-6" />
           </View>
 
           {/* dont have account */}
@@ -94,7 +94,7 @@ const SignIn = () => {
               className="text-xl font-sora text-center mt-10 "
             >
               <Text>Don't have an Account ? </Text>
-              <Text className="text-primary-300"> Sign Up</Text>
+              <Text className="text-primary-300"> Register</Text>
             </Link>
           </View>
         </View>

@@ -82,7 +82,11 @@ const SignUp = () => {
               secureTextEntry={true}
               onChangeText={(value) => setForm({ ...form, password: value })}
             />
-            <CustomButton title="Sign Up" onPress={onSignUp} className="mt-6" />
+            <CustomButton
+              title="Register"
+              onPress={onSignUp}
+              className="mt-6"
+            />
           </View>
 
           {/* dont have account */}
