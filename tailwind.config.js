@@ -28,7 +28,7 @@ module.exports = {
         // secondary : backgrounds,borders,alternating buttons styles
         secondary: {
           // card background
-          100: "",
+          100: "#313131",
 
           // 200 : links
           200: "",
