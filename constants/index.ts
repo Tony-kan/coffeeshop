@@ -29,12 +29,14 @@ import onboarding from "../assets/images/onboarding.png";
 import home_bg from "../assets/images/home_image.png";
 import detail_bg from "../assets/images/details_image.png";
 import avatar from "../assets/images/avatar.png";
+import noResult from "../assets/images/no-result.png";
 
 export const images = {
   onboarding,
   home_bg,
   detail_bg,
   avatar,
+  noResult,
 };
 
 export const icons = {

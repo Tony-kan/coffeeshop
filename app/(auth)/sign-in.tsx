@@ -123,7 +123,7 @@ const SignIn = () => {
               onChangeText={(value) => setForm({ ...form, password: value })}
             />
             {form.loading ? (
-              <ActivityIndicator size="large" color="#67C4E" />
+              <ActivityIndicator size="large" color="#C67C4E" />
             ) : (
               <CustomButton title="Login" onPress={onSignIn} className="mt-6" />
             )}

@@ -5,8 +5,9 @@ import {
   // ScrollView,
   Image,
   FlatList,
+  ActivityIndicator,
 } from "react-native";
-import React, { useCallback } from "react";
+import React, { useCallback, useState } from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { signOut } from "@/lib/supabase";
 // import BackButton from "@/components/BackButton";
@@ -15,6 +16,7 @@ import Filters from "@/components/Filters";
 import { images } from "@/constants";
 import { FeaturedCard } from "@/components/Cards";
 import CoffeeData from "@/lib/CoffeeData";
+import NoResults from "@/components/NoResults";
 
 /**
  * Home Screen
@@ -25,6 +27,7 @@ import CoffeeData from "@/lib/CoffeeData";
  */
 
 const Home = () => {
+  const [loading, setLoading] = useState(false);
   const logout = async () => {
     console.log("logout");
     await signOut();
@@ -49,6 +52,15 @@ const Home = () => {
         initialNumToRender={6}
         maxToRenderPerBatch={12}
         windowSize={7}
+        ListEmptyComponent={
+          loading ? (
+            <View className="flex-1 mt-20 flex-col items-center ">
+              <ActivityIndicator size="large" className="text-primary-300" />
+            </View>
+          ) : (
+            <NoResults />
+          )
+        }
         ListHeaderComponent={
           <View className="flex">
             {/* top section */}
