@@ -1,6 +1,7 @@
 import { icons } from "@/constants";
 
 export const Categories = [
+  { title: "All", category: "All" },
   { title: "Americano", category: "Americano" },
   { title: "Black Coffee", category: "Black Coffee" },
   { title: "Cappuccino", category: "Cappuccino" },

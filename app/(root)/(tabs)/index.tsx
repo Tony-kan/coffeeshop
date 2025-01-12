@@ -27,12 +27,14 @@ const Home = () => {
           {/* top section */}
           <View className="bg-black flex rounded-lg" style={{ height: "56%" }}>
             {/* header :  profile */}
-            <View className="flex flex-row justify-betwee items-center p-4">
+            <View className="flex mt-2  flex-row justify-between items-center p-4">
               <View className="flex justify-between gap-2">
-                <Text className="text-white font-sora-bold text-xl">
+                <Text className="text-white font-sora-bold text-md">
                   Location
                 </Text>
-                <Text className="text-white font-sora">Zomba , Malawi</Text>
+                <Text className="text-white font-sora text-sm">
+                  Zomba , Malawi
+                </Text>
               </View>
               <View className="flex">
                 <Image
