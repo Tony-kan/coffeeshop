@@ -49,7 +49,7 @@ export async function signUp(email: string, password: string) {
   if (error) Alert.alert("Error signing up", error.message);
   if (!session) Alert.alert("Please check your inbox for email verification!");
   //   return { user, session };
-  return { session };
+  return { session, error };
 }
 
 export async function signOut() {

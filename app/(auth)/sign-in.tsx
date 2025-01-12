@@ -1,10 +1,18 @@
-import { View, Text, ScrollView, Image, TouchableOpacity } from "react-native";
-import React, { useState } from "react";
+import {
+  View,
+  Text,
+  ScrollView,
+  Image,
+  TouchableOpacity,
+  Alert,
+  ActivityIndicator,
+} from "react-native";
+import React, { useCallback, useEffect, useState } from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { icons } from "@/constants";
 import InputField from "@/components/InputField";
 import CustomButton from "@/components/CustomButton";
-import { Link, Redirect } from "expo-router";
+import { Link, Redirect, router } from "expo-router";
 import { useGlobalContext } from "@/context/global-provider";
 import { useSupabase } from "@/lib/useSupabase";
 import { signIn } from "@/lib/supabase";
@@ -21,11 +29,16 @@ const SignIn = () => {
   const [form, setForm] = useState({
     email: "",
     password: "",
+    loading: false,
   });
 
-  // const { refetch, loading, isLoggedIn } = useGlobalContext();
+  const { refetch, loading, user, isLoggedIn } = useGlobalContext();
 
-  // if (!loading && isLoggedIn) return <Redirect href="/" />;
+  useEffect(() => {
+    if (!loading && isLoggedIn) {
+      router.replace("/(root)/(tabs)");
+    }
+  }, [user, loading, isLoggedIn]);
   const onPressAppleButton = () => {
     console.log("clicked apple auth");
   };
@@ -34,12 +47,24 @@ const SignIn = () => {
   };
 
   const onSignIn = async () => {
-    await signIn(form.email, form.password);
-    // const { data: user, refetch } = useSupabase({
-    //   fn: signIn,
-    //   params: { ...form },
-    // });
+    setForm({ ...form, loading: true });
+
+    try {
+      await signIn(form.email, form.password);
+      // <Redirect href="/(root)/(tabs)" />;
+      await refetch();
+
+      router.replace("/(root)/(tabs)");
+      // return <Redirect href="/(root)/(tabs)" />;
+    } catch (error) {
+      const errorMessage =
+        error instanceof Error ? error.message : "Failed to sign in.";
+      Alert.alert("Error", errorMessage);
+    } finally {
+      setForm({ ...form, loading: false });
+    }
   };
+
   return (
     <SafeAreaView className="h-full">
       <ScrollView contentContainerClassName="h-full flex justify-center">
@@ -97,7 +122,11 @@ const SignIn = () => {
               secureTextEntry={true}
               onChangeText={(value) => setForm({ ...form, password: value })}
             />
-            <CustomButton title="Login" onPress={onSignIn} className="mt-6" />
+            {form.loading ? (
+              <ActivityIndicator size="large" color="#67C4E" />
+            ) : (
+              <CustomButton title="Login" onPress={onSignIn} className="mt-6" />
+            )}
           </View>
 
           {/* dont have account */}

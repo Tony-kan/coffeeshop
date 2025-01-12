@@ -22,6 +22,7 @@ import eyeCross from "../assets/icons/eyecross.png";
 import email from "../assets/icons/email.png";
 import lock from "../assets/icons/lock.png";
 import user from "../assets/icons/person.png";
+import backArrow from "../assets/icons/back-arrow.png";
 
 //images
 import onboarding from "../assets/images/onboarding.png";
@@ -58,4 +59,5 @@ export const icons = {
   email,
   lock,
   user,
+  backArrow,
 };
