@@ -64,8 +64,8 @@ export const FeaturedCard = ({ item }: CardProps) => {
       />
 
       {/* name  & ingredients  */}
-      <View className="flex gap-2 my-2">
-        <Text className="font-sora-bold">{item.name}</Text>
+      <View className="flex gap-1 my-2">
+        <Text className="font-sora-bold text-lg">{item.name}</Text>
         <Text className="font-extralight">{item.special_ingredient}</Text>
       </View>
       {/* plus  &  add  btn  */}

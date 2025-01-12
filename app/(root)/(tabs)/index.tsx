@@ -52,7 +52,7 @@ const Home = () => {
         ListHeaderComponent={
           <View className="flex">
             {/* top section */}
-            <View className="bg-black flex rounded-lg mt-4">
+            <View className="bg-neutral-900 flex rounded-lg mt-4">
               {/* header :  profile */}
               <View className="flex mt-4 flex-row justify-between items-center px-2 py-4 mx-4">
                 <View className="flex justify-between gap-2">
