@@ -1,4 +1,4 @@
-import { View, Text, ScrollView, TouchableOpacity } from "react-native";
+import { Text, ScrollView, TouchableOpacity } from "react-native";
 import React, { useState } from "react";
 import { Categories } from "@/lib/data";
 import { router, useLocalSearchParams } from "expo-router";
@@ -28,7 +28,7 @@ const Filters = () => {
         <TouchableOpacity
           key={index}
           onPress={() => handleCategoryPress(item.category)}
-          className={`flex flex-col items-start mx-2 px-4 py-2 rounded-lg ${
+          className={`flex flex-col items-start mx-5 px-4 py-2 rounded-lg ${
             selectedCategory === item.category ? "bg-primary-300" : " "
           }`}
         >
