@@ -1,15 +1,15 @@
 import {
   View,
   Text,
-  TouchableOpacity,
-  ScrollView,
+  // TouchableOpacity,
+  // ScrollView,
   Image,
   FlatList,
 } from "react-native";
-import React from "react";
+import React, { useCallback } from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { signOut } from "@/lib/supabase";
-import BackButton from "@/components/BackButton";
+// import BackButton from "@/components/BackButton";
 import Search from "@/components/Search";
 import Filters from "@/components/Filters";
 import { images } from "@/constants";
@@ -29,20 +29,26 @@ const Home = () => {
     console.log("logout");
     await signOut();
   };
+
+  const renderItem = useCallback(
+    ({ item }) => <FeaturedCard item={item} />,
+    []
+  );
   return (
     <SafeAreaView className="h-full">
-      {/* <ScrollView contentContainerClassName="h-full"> */}
-
-      {/* </ScrollView> */}
       {/* Card section */}
       <FlatList
         data={CoffeeData}
-        renderItem={({ item }) => <FeaturedCard item={item} />}
+        renderItem={renderItem}
+        // renderItem={({ item }) => <FeaturedCard item={item} />}
         keyExtractor={(item) => item?.id}
         numColumns={2}
         // contentContainerClassName="pb-32"
         showsVerticalScrollIndicator={false}
         columnWrapperClassName="flex gap-5 px-5"
+        initialNumToRender={6}
+        maxToRenderPerBatch={12}
+        windowSize={7}
         ListHeaderComponent={
           <View className="flex">
             {/* top section */}
