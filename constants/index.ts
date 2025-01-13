@@ -23,6 +23,8 @@ import email from "../assets/icons/email.png";
 import lock from "../assets/icons/lock.png";
 import user from "../assets/icons/person.png";
 import backArrow from "../assets/icons/back-arrow.png";
+import milk from "../assets/icons/milk.png";
+import beans from "../assets/icons/beans.png";
 
 //images
 import onboarding from "../assets/images/onboarding.png";
@@ -64,4 +66,6 @@ export const icons = {
   lock,
   user,
   backArrow,
+  milk,
+  beans,
 };

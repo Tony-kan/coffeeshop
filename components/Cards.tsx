@@ -1,6 +1,7 @@
 import { View, Text, Image, TouchableOpacity } from "react-native";
 import React from "react";
 import { icons } from "@/constants";
+import { CardProps } from "@/types/type";
 
 // interface CardProps {
 //   id: number;
@@ -10,46 +11,18 @@ import { icons } from "@/constants";
 //   prices: string[];
 // }
 
-interface CardProps {
-  item: {
-    id: string;
-
-    name: string;
-
-    description: string;
-
-    roasted: string;
-
-    imagelink_square: any;
-
-    imagelink_portrait: any;
-
-    ingredients: string;
-
-    special_ingredient: string;
-
-    prices: {
-      size: string;
-
-      price: string;
-
-      currency: string;
-    }[];
-    average_rating: string;
-
-    index: number;
-  };
-}
-
 //note  :  prices: [
 //   {size: 'S', price: '1.38', currency: '$'},
 //   {size: 'M', price: '3.15', currency: '$'},
 //   {size: 'L', price: '4.29', currency: '$'},
 // ],
 
-export const FeaturedCard = ({ item }: CardProps) => {
+export const FeaturedCard = ({ item, onPress }: CardProps) => {
   return (
-    <TouchableOpacity className="flex-1 w-full mt-2 mb-4 px-4 py-2  rounded-lg bg-white shadow-black-100/70 relative">
+    <TouchableOpacity
+      onPress={onPress}
+      className="flex-1 w-full mt-2 mb-4 px-4 py-2  rounded-lg bg-white shadow-black-100/70 relative"
+    >
       {/* rating & star  */}
       <View className="flex flex-row  items-center absolute px-2  top-5 left-5 bg-white/90 p-1   rounded-lg gap-2">
         <Image source={icons.star} className="size-3.5" />

@@ -17,6 +17,8 @@ import { images } from "@/constants";
 import { FeaturedCard } from "@/components/Cards";
 import CoffeeData from "@/lib/CoffeeData";
 import NoResults from "@/components/NoResults";
+import { router } from "expo-router";
+import { CardProps } from "@/types/type";
 
 /**
  * Home Screen
@@ -34,19 +36,30 @@ const Home = () => {
   };
 
   const renderItem = useCallback(
-    ({ item }) => <FeaturedCard item={item} />,
+    ({ item }: CardProps) => (
+      <FeaturedCard item={item} onPress={() => handleCardPress(item.id)} />
+    ),
     []
   );
+
+  const handleCardPress = (id: string) => {
+    console.log("id", id);
+    router.push(`/details/${id}`);
+  };
+
   return (
     <SafeAreaView className="h-full">
       {/* Card section */}
       <FlatList
         data={CoffeeData}
+        // renderItem={({ item }) => (
+        //   <FeaturedCard item={item} onPress={() => handleCardPress(item.id)} />
+        // )}
         renderItem={renderItem}
         // renderItem={({ item }) => <FeaturedCard item={item} />}
         keyExtractor={(item) => item?.id}
         numColumns={2}
-        // contentContainerClassName="pb-32"
+        contentContainerClassName="pb-16"
         showsVerticalScrollIndicator={false}
         columnWrapperClassName="flex gap-5 px-5"
         initialNumToRender={6}
