@@ -23,7 +23,7 @@ const TabIcon = ({ focused, icon, title }: TabIconProps) => (
         focused
           ? "text-primary-300 font-sora-bold"
           : "text-secondary-100 font-sora"
-      } text-xs w-full text-center mt-1`}
+      } text-xs w-full text-center mt-1 capitalize`}
     >
       {title}
     </Text>
@@ -54,16 +54,7 @@ const TabsLayout = () => {
           ),
         }}
       />
-      <Tabs.Screen
-        name="favorite"
-        options={{
-          title: "Favorite",
-          headerShown: false,
-          tabBarIcon: ({ focused }) => (
-            <TabIcon focused={focused} icon={icons.heart} title="Favorite" />
-          ),
-        }}
-      />
+
       <Tabs.Screen
         name="order"
         options={{
@@ -71,6 +62,16 @@ const TabsLayout = () => {
           headerShown: false,
           tabBarIcon: ({ focused }) => (
             <TabIcon focused={focused} icon={icons.bag} title="Order" />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="delivery"
+        options={{
+          title: "Delivery",
+          headerShown: false,
+          tabBarIcon: ({ focused }) => (
+            <TabIcon focused={focused} icon={icons.bike} title="Delivery" />
           ),
         }}
       />
