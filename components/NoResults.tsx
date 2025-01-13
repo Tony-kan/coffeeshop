@@ -2,9 +2,9 @@ import { View, Text, Image } from "react-native";
 import React from "react";
 import { images } from "@/constants";
 
-const NoResults = () => {
+const NoResults = ({ className }: { className?: string }) => {
   return (
-    <View className="flex items-center my-5">
+    <View className={`flex items-center ${className}`}>
       <Image
         source={images.noResult}
         className="w-11/12 h-40"

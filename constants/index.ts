@@ -10,6 +10,7 @@ import location from "../assets/icons/Location.png";
 import note from "../assets/icons/note.png";
 import notification from "../assets/icons/Notification.png";
 import plus from "../assets/icons/plus.png";
+import minus from "../assets/icons/minus.png";
 import search from "../assets/icons/search-normal.png";
 import star from "../assets/icons/star.png";
 import phone from "../assets/icons/telpon.png";
@@ -70,4 +71,5 @@ export const icons = {
   milk,
   beans,
   arrowRight,
+  minus,
 };

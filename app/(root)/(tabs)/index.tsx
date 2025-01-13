@@ -71,7 +71,7 @@ const Home = () => {
               <ActivityIndicator size="large" className="text-primary-300" />
             </View>
           ) : (
-            <NoResults />
+            <NoResults className="my-5" />
           )
         }
         ListHeaderComponent={

@@ -38,10 +38,40 @@ export const FeaturedCard = ({ item, onPress }: CardProps) => {
   );
 };
 
-export const OrderCard = () => {
+export const OrderCard = ({ item }: CardProps) => {
   return (
-    <View>
-      <Text>Order Card</Text>
+    <View className="flex flex-row items-center my-1.5 rounded-xl px-2 bg-secondary-200">
+      <View className="flex-1 flex-row justify-between items-center">
+        <View className="flex items-center justify-center h-16 w-16 rounded-xl overflow-hidden">
+          <Image
+            source={item.imagelink_square}
+            className="w-full h-full"
+            resizeMode="contain"
+            key={item.id}
+          />
+        </View>
+        <View>
+          <Text className="font-sora-bold">{item.name}</Text>
+          <Text className="font-sora-light">{item.special_ingredient}</Text>
+        </View>
+        <View className="flex flex-row items-center gap-2">
+          <TouchableOpacity className="bg-primary-300 rounded-lg size-8 flex items-center justify-center p-2">
+            <Image
+              source={icons.minus}
+              className="size-6"
+              resizeMode="contain"
+            />
+          </TouchableOpacity>
+          <Text className="font-sora-bold mx-2">2</Text>
+          <TouchableOpacity className="bg-primary-300 rounded-lg size-8 flex items-center justify-center p-2">
+            <Image
+              source={icons.plus}
+              className="size-6"
+              resizeMode="contain"
+            />
+          </TouchableOpacity>
+        </View>
+      </View>
     </View>
   );
 };

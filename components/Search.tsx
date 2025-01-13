@@ -19,7 +19,7 @@ const Search = () => {
   };
   return (
     <View
-      className={`border-2  bg-secondary-100 flex flex-row justify-between items-center px-2 mx-6 my-2 py-1 rounded-lg ${
+      className={`border-2 border-secondary-100  bg-secondary-100 flex flex-row justify-between items-center px-2 mx-6 my-2 py-1 rounded-lg ${
         isFocused ? "border-primary-300" : ""
       }`}
     >
