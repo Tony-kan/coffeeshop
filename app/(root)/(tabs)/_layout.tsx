@@ -21,7 +21,7 @@ const TabIcon = ({ focused, icon, title }: TabIconProps) => (
     <Text
       className={`${
         focused
-          ? "text-primary-300 font-sora-medium"
+          ? "text-primary-300 font-sora-bold"
           : "text-secondary-100 font-sora"
       } text-xs w-full text-center mt-1`}
     >

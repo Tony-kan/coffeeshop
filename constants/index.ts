@@ -25,6 +25,7 @@ import user from "../assets/icons/person.png";
 import backArrow from "../assets/icons/back-arrow.png";
 import milk from "../assets/icons/milk.png";
 import beans from "../assets/icons/beans.png";
+import arrowRight from "../assets/icons/arrow-right.png";
 
 //images
 import onboarding from "../assets/images/onboarding.png";
@@ -68,4 +69,5 @@ export const icons = {
   backArrow,
   milk,
   beans,
+  arrowRight,
 };

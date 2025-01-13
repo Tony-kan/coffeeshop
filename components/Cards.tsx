@@ -3,20 +3,6 @@ import React from "react";
 import { icons } from "@/constants";
 import { CardProps } from "@/types/type";
 
-// interface CardProps {
-//   id: number;
-//   name: string;
-//   image: string;
-//   special_ingredient: string;
-//   prices: string[];
-// }
-
-//note  :  prices: [
-//   {size: 'S', price: '1.38', currency: '$'},
-//   {size: 'M', price: '3.15', currency: '$'},
-//   {size: 'L', price: '4.29', currency: '$'},
-// ],
-
 export const FeaturedCard = ({ item, onPress }: CardProps) => {
   return (
     <TouchableOpacity
@@ -49,5 +35,13 @@ export const FeaturedCard = ({ item, onPress }: CardProps) => {
         </TouchableOpacity>
       </View>
     </TouchableOpacity>
+  );
+};
+
+export const OrderCard = () => {
+  return (
+    <View>
+      <Text>Order Card</Text>
+    </View>
   );
 };

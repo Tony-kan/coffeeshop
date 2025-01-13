@@ -31,7 +31,7 @@ module.exports = {
           100: "#313131",
 
           // 200 : links
-          200: "",
+          200: "#F2F2F2",
 
           //300 : icons,labels
           300: "#9B9B9B",
