@@ -1,17 +1,28 @@
 import { View, Text } from "react-native";
-import React, { createContext, useContext } from "react";
+import React, { createContext, useContext, useEffect, useState } from "react";
 import { GlobalContextType, GlobalProviderProps } from "@/types/type";
 import { useSupabase } from "@/lib/useSupabase";
-import { getCurrentUser } from "@/lib/supabase";
+import { getCurrentSession, getCurrentUser } from "@/lib/supabase";
 
 const GlobalContext = createContext<GlobalContextType | undefined>(undefined);
 
 export const GlobalProvider = ({ children }: GlobalProviderProps) => {
-  const { data: user, loading, refetch } = useSupabase({ fn: getCurrentUser });
+  const {
+    data: session,
+    loading,
+    refetch,
+  } = useSupabase({ fn: getCurrentSession });
+
+  const [user, setUser] = useState(session?.user || null);
+
+  useEffect(() => {
+    setUser(session?.user || null);
+  }, [session]);
 
   const isLoggedIn = !!user;
-
-  console.log(JSON.stringify(user, null, 2));
+  // const user = session?.user; Password
+  //
+  // console.log(JSON.stringify(user, null, 2));
   return (
     <GlobalContext.Provider value={{ isLoggedIn, user, loading, refetch }}>
       {children}

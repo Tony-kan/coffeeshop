@@ -7,6 +7,11 @@ export default function Index() {
   const { onboarded } = { onboarded: true };
   const { isLoggedIn, loading, user } = useGlobalContext();
 
+  console.log("onboarded", onboarded);
+  console.log("isLoggedIn", isLoggedIn);
+  console.log("loading", loading);
+  console.log("user ::::::-------::::::", user);
+
   // if (onboarded && isLoggedIn) {
   //   return <Redirect href="/(root)/(tabs)" />;
   // }

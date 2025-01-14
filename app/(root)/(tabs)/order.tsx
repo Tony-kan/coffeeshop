@@ -26,9 +26,9 @@ import CoffeeData from "@/lib/CoffeeData";
 
 // export const orderItems = [{}];
 const Order = () => {
-  const [selectedButton, setSelectedButton] = useState("Deliver");
+  const [orderType, setOrderType] = useState("Deliver");
   const [loading, setLoading] = useState(false);
-  const toggleButtton = (text: string) => setSelectedButton(text);
+  const toggleButtton = (text: string) => setOrderType(text);
 
   const slicedCoffeeData = CoffeeData.slice(0, 2);
   return (
@@ -63,11 +63,11 @@ const Order = () => {
               <Text className="text-2xl font-sora-semiBold">Order</Text>
             </View>
             {/* toggle bten deliver and pickup  */}
-            <View className="flex flex-row items-center  justify-center h-14">
+            <View className="flex mt-2 flex-row items-center  justify-center h-14">
               <View className="flex flex-row justify-center h-full items-center rounded-xl bg-secondary-200">
                 <TouchableOpacity
                   className={`flex items-center justify-center h-full rounded-xl w-52 ${
-                    selectedButton === "Deliver"
+                    orderType === "Deliver"
                       ? "bg-primary-300"
                       : "bg-secondary-200"
                   }`}
@@ -75,7 +75,7 @@ const Order = () => {
                 >
                   <Text
                     className={`font-sora-semiBold ${
-                      selectedButton === "Deliver" ? "text-white" : ""
+                      orderType === "Deliver" ? "text-white" : ""
                     }`}
                   >
                     Deliver
@@ -83,7 +83,7 @@ const Order = () => {
                 </TouchableOpacity>
                 <TouchableOpacity
                   className={`flex items-center justify-center h-full rounded-xl w-52 ${
-                    selectedButton === "Pick Up"
+                    orderType === "Pick Up"
                       ? "bg-primary-300"
                       : "bg-secondary-200"
                   }`}
@@ -91,7 +91,7 @@ const Order = () => {
                 >
                   <Text
                     className={`font-sora-semiBold ${
-                      selectedButton === "Pick Up" ? "text-white" : ""
+                      orderType === "Pick Up" ? "text-white" : ""
                     }`}
                   >
                     Pick Up
@@ -101,7 +101,7 @@ const Order = () => {
             </View>
 
             {/* delivery address section  */}
-            <View className="flex mx-5 my-4 gap-6">
+            <View className="flex mx-5 my-4 gap-5">
               <Text className="text-xl font-sora-semiBold">
                 Delivery Address
               </Text>

@@ -22,7 +22,8 @@ const SignUp = () => {
 
   const onSignUp = async () => {
     console.log(form);
-    await signUp(form.email, form.password);
+    const { error, data } = await signUp(form.email, form.password);
+    console.log("data", data);
   };
   return (
     <SafeAreaView className="h-full">

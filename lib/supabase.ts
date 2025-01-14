@@ -49,16 +49,24 @@ export async function signUp(email: string, password: string) {
   if (error) Alert.alert("Error signing up", error.message);
   if (!session) Alert.alert("Please check your inbox for email verification!");
   //   return { user, session };
-  return { session, error };
+  return { data: session, error };
 }
 
 export async function signOut() {
   const { error } = await supabase.auth.signOut();
   if (error) Alert.alert("Error signing out", error.message);
-  return;
+  return { status: "success" };
 }
 
 export async function getCurrentUser() {
   const user = supabase.auth.getUser();
   return user;
+}
+
+export async function getCurrentSession() {
+  const {
+    data: { session },
+  } = await supabase.auth.getSession();
+  console.log("user session :::: ", session);
+  return session;
 }
