@@ -23,6 +23,40 @@ export const Categories = [
   { title: "Vienna Coffee", category: "Vienna Coffee" },
 ];
 
+export const settings = [
+  // {
+  //   title: "My Bo",
+  //   icon: icons.calendar,
+  // },
+  {
+    title: "Payments",
+    icon: icons.wallet,
+  },
+  {
+    title: "Profile",
+    icon: icons.user,
+  },
+  {
+    title: "Notifications",
+    icon: icons.bell,
+  },
+  {
+    title: "Security",
+    icon: icons.shield,
+  },
+  {
+    title: "Language",
+    icon: icons.language,
+  },
+  {
+    title: "Help Center",
+    icon: icons.info,
+  },
+  {
+    title: "Invite Friends",
+    icon: icons.people,
+  },
+];
 // const ProfilesObjects = [
 //     { title: 'My Profile', icon: icons.person },
 //     { title: 'Orders', icon: icons.coffeeCup },

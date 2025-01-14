@@ -35,7 +35,7 @@ const SignIn = () => {
   const { refetch, loading, user, isLoggedIn } = useGlobalContext();
 
   useEffect(() => {
-    if (!loading && isLoggedIn) {
+    if (!loading && isLoggedIn && user) {
       router.replace("/(root)/(tabs)");
     }
   }, [user, loading, isLoggedIn]);
@@ -50,12 +50,15 @@ const SignIn = () => {
     setForm({ ...form, loading: true });
 
     try {
-      await signIn(form.email, form.password);
+      const { data } = await signIn(form.email, form.password);
       // <Redirect href="/(root)/(tabs)" />;
       await refetch();
 
-      router.replace("/(root)/(tabs)");
-      // return <Redirect href="/(root)/(tabs)" />;
+      if (data.session) {
+        router.replace("/(root)/(tabs)");
+      }
+
+      console.log("data L;;;;;", data);
     } catch (error) {
       const errorMessage =
         error instanceof Error ? error.message : "Failed to sign in.";

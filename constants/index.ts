@@ -24,9 +24,18 @@ import email from "../assets/icons/email.png";
 import lock from "../assets/icons/lock.png";
 import user from "../assets/icons/person.png";
 import backArrow from "../assets/icons/back-arrow.png";
+import arrowRight from "../assets/icons/arrow-right.png";
 import milk from "../assets/icons/milk.png";
 import beans from "../assets/icons/beans.png";
-import arrowRight from "../assets/icons/arrow-right.png";
+import bell from "../assets/icons/bell.png";
+import calendar from "../assets/icons/calendar.png";
+import info from "../assets/icons/info.png";
+import language from "../assets/icons/language.png";
+import logout from "../assets/icons/logout.png";
+import shield from "../assets/icons/shield.png";
+import wallet from "../assets/icons/wallet.png";
+
+import people from "../assets/icons/people.png";
 
 //images
 import onboarding from "../assets/images/onboarding.png";
@@ -72,4 +81,12 @@ export const icons = {
   beans,
   arrowRight,
   minus,
+  bell,
+  calendar,
+  info,
+  shield,
+  language,
+  logout,
+  wallet,
+  people,
 };

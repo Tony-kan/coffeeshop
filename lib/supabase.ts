@@ -29,13 +29,13 @@ AppState.addEventListener("change", (state) => {
 });
 
 export async function signIn(email: string, password: string) {
-  const { error } = await supabase.auth.signInWithPassword({
+  const { data, error } = await supabase.auth.signInWithPassword({
     email,
     password,
   });
   //   if (error) throw error;
   if (error) Alert.alert("Error signing in", error.message);
-  return;
+  return { data };
 }
 
 export async function signUp(email: string, password: string) {
