@@ -22,7 +22,7 @@ const SignUp = () => {
 
   const onSignUp = async () => {
     console.log(form);
-    const { error, data } = await signUp(form.email, form.password);
+    const { error, data } = await signUp(form.name, form.email, form.password);
     console.log("data", data);
   };
   return (

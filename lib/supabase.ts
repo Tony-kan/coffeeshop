@@ -38,15 +38,21 @@ export async function signIn(email: string, password: string) {
   return { data };
 }
 
-export async function signUp(email: string, password: string) {
+export async function signUp(name: string, email: string, password: string) {
   const {
     data: { session },
     error,
   } = await supabase.auth.signUp({
     email,
     password,
+    options: {
+      data: {
+        name,
+      },
+    },
   });
   if (error) Alert.alert("Error signing up", error.message);
+  if (error) console.log("error :::: ", error);
   if (!session) Alert.alert("Please check your inbox for email verification!");
   //   return { user, session };
   return { data: session, error };

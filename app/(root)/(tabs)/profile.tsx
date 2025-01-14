@@ -58,6 +58,9 @@ const SettingsItem = ({
 const Profile = () => {
   const { refetch, user } = useGlobalContext();
 
+  console.log("logged in user ---------------", JSON.stringify(user, null, 2));
+  console.log("logged in user ---------------");
+
   const handleLogout = async () => {
     const result = await signOut();
 
@@ -88,7 +91,9 @@ const Profile = () => {
             <TouchableOpacity className="absolute bottom-11 right-2">
               <Image source={icons.edit} className="size-9" />
             </TouchableOpacity>
-            <Text className="text-2xl font-sora-bold mt-2">{user?.name}</Text>
+            <Text className="text-2xl font-sora-bold mt-2">
+              {user?.user_metadata?.name}
+            </Text>
           </View>
         </View>
         <View className="flex flex-col mt-4">
